@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { FC } from 'react'
+import React from 'react'
+import { Canvas } from '@react-three/fiber'
 import styles from '../styles/Home.module.css'
+import RotationBox from '../components/organisms/RotationBox'
 
-const Home: FC = () => {
+const Home: React.FC = () => {
   return (
     <>
       <Head>
@@ -11,12 +13,22 @@ const Home: FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="mb-10 text-green-500 text-3xl">サンプル</h1>
-      <p className="mb-2 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis consequatur eius hic ipsam nostrum omnis optio! Doloribus quaerat quis ratione? At, maiores voluptas? Eveniet odio omnis repellendus sapiente voluptatibus.</p>
-      <button className="btn-blue">Let's Start!!</button>
-      <h1 className="text-4xl text-green-700 text-center font-semibold">
-        Hello, adam
-      </h1>
+      <section className="bg-gray-800 mt-20">
+        <div className="mx-auto text-center text-yellow-300">
+          あいうお
+        </div>
+      </section>
+
+      <Canvas>
+        <ambientLight intensity={0.1} />
+        <directionalLight color="red" position={[0, 0, 5]} />
+        <RotationBox />
+        {/* <mesh>
+          <octahedronGeometry />
+          <meshNormalMaterial />
+        </mesh> */}
+      </Canvas>
+
     </>
   )
 }

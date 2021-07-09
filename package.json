@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/a11y": "^2.1.0",
+    "@react-three/drei": "^7.0.6",
+    "@react-three/fiber": "^7.0.4",
     "autoprefixer": "^10.2.6",
     "next": "11.0.1",
+    "next-transpile-modules": "^8.0.0",
     "postcss": "^8.3.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "three": "^0.130.1"
   },
   "devDependencies": {
     "@types/node": "^16.0.1",

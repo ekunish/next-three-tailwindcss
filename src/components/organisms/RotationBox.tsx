@@ -2,7 +2,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import React, { useState } from 'react'
 
 const RotationBox: React.FC = () => {
-  const myMesh = React.useRef();
+  const myMesh = React.useRef<any>();
   const [active, setActive] = useState(false)
 
   useFrame(({ clock }) => {
@@ -12,12 +12,12 @@ const RotationBox: React.FC = () => {
 
   return (
     <mesh
-      scale={active ? 1.5 : 1}
+      scale={active ? 3 : 1}
       onClick={() => setActive(!active)}
       ref={myMesh}
     >
       <boxBufferGeometry />
-      <meshPhongMaterial color="royalblue" />
+      <meshPhongMaterial />
     </mesh>
   )
 }

@@ -12,7 +12,7 @@ const RotationBox: React.FC = () => {
 
   return (
     <mesh
-      scale={active ? 3 : 1}
+      scale={active ? 5 : 1}
       onClick={() => setActive(!active)}
       ref={myMesh}
     >

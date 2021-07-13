@@ -4,6 +4,10 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import styles from '../styles/Home.module.css'
 import RotationBox from '../components/organisms/RotationBox'
+import TestBox from '../components/organisms/TestBox'
+import Boxes from '../components/organisms/Boxes'
+import { OrbitControls, Stars } from '@react-three/drei'
+import Box from '../components/organisms/Box'
 
 const Home: React.FC = () => {
   return (
@@ -15,20 +19,20 @@ const Home: React.FC = () => {
 
       <section className="bg-gray-800 mt-20">
         <div className="mx-auto text-center text-yellow-300">
-          あいうお
+          あいうえお
         </div>
       </section>
 
-      <Canvas>
-        <ambientLight intensity={0.1} />
-        <directionalLight color="red" position={[0, 0, 5]} />
-        <RotationBox />
-        <mesh>
-          <octahedronGeometry />
-          <meshNormalMaterial />
-        </mesh>
-      </Canvas>
-
+      <div style={{ height: "50vh" }}>
+        <Canvas
+          camera={{ position: [0, 0, 10], near: 1, far: 20 }}
+        >
+          <OrbitControls />
+          <ambientLight intensity={0.1} />
+          <directionalLight color="red" position={[0, 0, 3]} />
+          <RotationBox />
+        </Canvas>
+      </div>
     </>
   )
 }

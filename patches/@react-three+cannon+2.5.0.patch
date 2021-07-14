@@ -1,0 +1,17 @@
+diff --git a/node_modules/@react-three/cannon/src/index.tsx b/node_modules/@react-three/cannon/src/index.tsx
+index f7f908c..e3cab2b 100644
+--- a/node_modules/@react-three/cannon/src/index.tsx
++++ b/node_modules/@react-three/cannon/src/index.tsx
+@@ -7,9 +7,9 @@ export * from './hooks'
+ 
+ function Physics(props: ProviderProps) {
+   return (
+-    <Suspense fallback={null}>
+-      <Provider {...props} />
+-    </Suspense>
++    // <Suspense fallback={null}>
++    <Provider {...props} />
++    // </Suspense>
+   )
+ }
+ 

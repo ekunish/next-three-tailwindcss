@@ -6,6 +6,8 @@ import styles from '../styles/Home.module.css'
 import RotationBox from '../components/organisms/RotationBox'
 import Boxes from '../components/organisms/Boxes'
 import { OrbitController } from '../components/atoms/OrbitController'
+import { PysicsBox } from '../components/organisms/PysicsBox'
+
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +22,9 @@ const Home: React.FC = () => {
           あいうえおかきくけこ
         </div>
       </section>
+
+
+      <PysicsBox />
 
       <div style={{ height: "50vh" }}>
         <Canvas
